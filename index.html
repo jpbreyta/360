@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>360° Scrolling Website</title>
+    
+    <!-- Required CSS for Photo Sphere Viewer -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photo-sphere-viewer@4/dist/photo-sphere-viewer.min.css">
+    
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #222;
+            color: white;
+            text-align: center;
+        }
+
+        /* Top Section (Hero) */
+        header {
+            background-color: #111;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+        }
+        h1 {
+            font-size: 3rem;
+        }
+        p {
+            font-size: 1.2rem;
+        }
+
+        /* 360° Viewer */
+        #viewer-container {
+            width: 70%;
+            height: 70vh;
+        }
+        #viewer {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* About Section */
+        #about {
+            background-color: #333;
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 360° Scrolling Viewer -->
+    <section id="viewer-container">
+        <div id="viewer"></div>
+    </section>
+
+    <!-- Required JS Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.137.0/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uevent@2/browser.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/photo-sphere-viewer@4/dist/photo-sphere-viewer.min.js"></script>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Initialize the viewer after the DOM is fully loaded
+            const viewer = new PhotoSphereViewer.Viewer({
+                container: document.getElementById("viewer"),
+                panorama: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/360-wp-plugin.jpg-OsqqzcFTYyhtHquQvnlbMZAbW7Nu6F.jpeg", // Using the direct URL to the image
+                navbar: [
+                    'autorotate', 'zoom', 'fullscreen'
+                ],
+                defaultZoomLvl: 0,
+                defaultLat: 0,
+                defaultLong: 0,
+                minFov: 30,
+                maxFov: 90
+            });
+        });
+    </script>
+
+</body>
+</html>
