@@ -1,89 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>360° Scrolling Website</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>360° View - San Juan Nepomoceno Church</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     
-    <!-- Required CSS for Photo Sphere Viewer -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photo-sphere-viewer@4/dist/photo-sphere-viewer.min.css">
+    <!-- Photo Sphere Viewer -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/photo-sphere-viewer@4/dist/photo-sphere-viewer.min.css"
+    />
     
-    <style>
-        /* General Styles */
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: #222;
-            color: white;
-            text-align: center;
-        }
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="container py-4">
+        <header class="text-center mb-4">
+          <h1>San Juan Nepomoceno Church</h1>
+          <p class="lead">Explore the historic church in 360°</p>
+        </header>
+        
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-7">
+            <div class="viewer-container">
+              <div id="viewer"></div>
+            </div>
+            <div class="caption text-center mt-3">
+              <h3>San Juan Nepomoceno Church</h3>
+              <p class="text-muted">Use mouse or touch to navigate the 360° view</p>
+            </div>
+          </div>
 
-        /* Top Section (Hero) */
-        header {
-            background-color: #111;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-        .container {
-            max-width: 600px;
-        }
-        h1 {
-            font-size: 3rem;
-        }
-        p {
-            font-size: 1.2rem;
-        }
+          <div class="col-lg-5">
+            <div class="content-card">
+              <h2>Church History</h2>
+              <p>
+                The San Juan Nepomuceno Church, standing on Padre Burgos Street,
+                traces its origins to San Juan de Bolboc, which separated from
+                Rosario, Batangas, in 1874 due to flooding in its original location.
+                The present church, inaugurated on January 24, 1894, has undergone
+                renovations, with support from affluent families and parishioners,
+                and was dedicated in 1996 by the National Historical Commission.
+              </p>
+              <p>
+                A legend tells of St. John Nepomucene's image being found in a
+                bubbling spring, which stopped bubbling when the icon was retrieved,
+                while wartime stories recall divine interventions, including an
+                attempt by Japanese soldiers to burn the church, which miraculously
+                failed. Captain Takano, a Japanese officer, reportedly saw the
+                saint walking through their camp and later became a regular
+                churchgoer, convinced of the saint's presence.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-        /* 360° Viewer */
-        #viewer-container {
-            width: 70%;
-            height: 70vh;
-        }
-        #viewer {
-            width: 100%;
-            height: 100%;
-        }
-
-        /* About Section */
-        #about {
-            background-color: #333;
-            padding: 50px;
-        }
-    </style>
-</head>
-<body>
-
-    <!-- 360° Scrolling Viewer -->
-    <section id="viewer-container">
-        <div id="viewer"></div>
-    </section>
-
-    <!-- Required JS Libraries -->
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.137.0/build/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uevent@2/browser.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/photo-sphere-viewer@4/dist/photo-sphere-viewer.min.js"></script>
-    
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // Initialize the viewer after the DOM is fully loaded
-            const viewer = new PhotoSphereViewer.Viewer({
-                container: document.getElementById("viewer"),
-                panorama: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/360-wp-plugin.jpg-OsqqzcFTYyhtHquQvnlbMZAbW7Nu6F.jpeg", // Using the direct URL to the image
-                navbar: [
-                    'autorotate', 'zoom', 'fullscreen'
-                ],
-                defaultZoomLvl: 0,
-                defaultLat: 0,
-                defaultLong: 0,
-                minFov: 30,
-                maxFov: 90
-            });
-        });
-    </script>
-
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
