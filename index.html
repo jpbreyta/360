@@ -13,7 +13,7 @@
       href="https://cdn.jsdelivr.net/npm/photo-sphere-viewer@4/dist/photo-sphere-viewer.min.css"
     />
     
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,44 +23,27 @@
   </head>
   <body>
     <div class="main-container">
+      <header class="text-center mt-5">
+        <h1>Cultural Heritiges in San Juan Batangas.</h1>
+        <p class="lead">Explore the historic church in 360°</p>
+      </header>
       <div class="container py-4">
-        <header class="text-center mb-4">
-          <h1>San Juan Nepomoceno Church</h1>
-          <p class="lead">Explore the historic church in 360°</p>
-        </header>
-        
         <div class="row g-4 align-items-center">
           <div class="col-lg-7">
             <div class="viewer-container">
               <div id="viewer"></div>
             </div>
             <div class="caption text-center mt-3">
-              <h3>San Juan Nepomoceno Church</h3>
-              <p class="text-muted">Use mouse or touch to navigate the 360° view</p>
+              <p id="image-description" class="text-muted">Use mouse or touch to navigate the 360° view</p>
+            </div>
+            <div class="slider-controls text-center mt-3">
+              <button id="prev-btn" class="btn btn-primary me-2">Previous</button>
+              <button id="next-btn" class="btn btn-primary">Next</button>
             </div>
           </div>
 
           <div class="col-lg-5">
             <div class="content-card">
-              <h2>Church History</h2>
-              <p>
-                The San Juan Nepomuceno Church, standing on Padre Burgos Street,
-                traces its origins to San Juan de Bolboc, which separated from
-                Rosario, Batangas, in 1874 due to flooding in its original location.
-                The present church, inaugurated on January 24, 1894, has undergone
-                renovations, with support from affluent families and parishioners,
-                and was dedicated in 1996 by the National Historical Commission.
-              </p>
-              <p>
-                A legend tells of St. John Nepomucene's image being found in a
-                bubbling spring, which stopped bubbling when the icon was retrieved,
-                while wartime stories recall divine interventions, including an
-                attempt by Japanese soldiers to burn the church, which miraculously
-                failed. Captain Takano, a Japanese officer, reportedly saw the
-                saint walking through their camp and later became a regular
-                churchgoer, convinced of the saint's presence.
-              </p>
-            </div>
           </div>
         </div>
       </div>
@@ -69,6 +52,6 @@
     <script src="https://cdn.jsdelivr.net/npm/three@0.137.0/build/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uevent@2/browser.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/photo-sphere-viewer@4/dist/photo-sphere-viewer.min.js"></script>
-    <script src="script.js"></script>
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
