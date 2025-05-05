@@ -79,11 +79,14 @@ The Barangay Pinagbayan was the former town proper of San Juan, Batangas, during
             src: "./assets/img/360_5.jpg",
             description: "Use mouse or touch to navigate the 360° view",
             content: `
-              <h2>Historical Markers</h2>
+              <h2>Casa Soledad</h2>
               <p>
-                Various historical markers and plaques around the church provide
-                insights into its significance and the events that shaped its history.
+Found at the corner of Mojica St and De Villa St, Casa Soledad is one of the grand heritage houses that has retained its traditional “bahay na bato” Spanish architecture. The house is named after Soledad, one of the four children of the original owners, Santos Lopez and Maria Mercado (a relative of the national hero, Jose Rizal). Soledad Lopez’s siblings were Don Miguel Lopez (a former mayor of San Juan), Arsenio Lopez, and Leonor Lopez. The house initially belonged to Leonor, the youngest of the siblings, but Soledad eventually acquired it after getting married.
               </p>
+              <h2>Location</h2>
+              <p>Casa Soledad is located at the corner of Mojica Street and De Villa Street in San Juan, Batangas. 
+<br><br>
+R9GV+CFC, Mojica St, Corner De Villa St, San Juan, Batangas</p>
             `
         }
     ];
